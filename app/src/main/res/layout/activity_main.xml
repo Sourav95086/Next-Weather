@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#020a2e"
+    >
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/bar">
+    </ProgressBar>
+    <LinearLayout
+        android:weightSum="100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/header">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next \nWeather"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:layout_marginHorizontal="30dp">
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/searchbar"
+                    android:padding="10dp"
+                    android:layout_marginVertical="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:hint="🔍 Enter City Here ..."
+                    android:id="@+id/search">
+                </EditText>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/search_button"
+                    android:textAllCaps="false"
+                    android:textColor="#ffff"
+                    android:id="@+id/search_button">
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="45"
+            android:layout_below="@id/header"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="_ _ / _ _"
+                    android:textColor="#f8f7fc"
+                    android:textSize="40sp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/temp"
+                    android:gravity="center_horizontal|bottom">
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="feels like : _ _ / _ _"
+                    android:textColor="#f8f7fc"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:id="@+id/feel_like">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/discription"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:src="@drawable/sunny">
+
+            </ImageView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Discription : "
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:gravity="center_vertical"
+                android:elevation="8dp"
+                android:id="@+id/mdiscription"
+                android:layout_marginHorizontal="25dp">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:orientation="horizontal"
+            >
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/card_slides"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/temperature"
+                    android:layout_margin="10dp"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:text="Max temp : _ _"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:id="@+id/max"
+                    >
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:text="Min temp : _ _"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:id="@+id/min"
+                    >
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/card_slides"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/humidity"
+                    android:layout_margin="10dp"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Humidity : _ _"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/humidity"
+                    >
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="15dp"
+                android:background="@drawable/card_slides"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/wind"
+                    android:layout_margin="10dp"
+                    >
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Wind Speed : _ _"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/windspeed"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
